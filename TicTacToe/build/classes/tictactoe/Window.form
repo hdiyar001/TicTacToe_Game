@@ -179,9 +179,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="feld10">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Snap ITC" size="36" style="0"/>
                 </Property>
@@ -286,9 +283,6 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="feld1">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Snap ITC" size="36" style="0"/>
                 </Property>
@@ -320,9 +314,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="feld2">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Snap ITC" size="36" style="0"/>
                 </Property>
@@ -354,9 +345,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="feld3">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Snap ITC" size="36" style="0"/>
                 </Property>
@@ -388,9 +376,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="feld4">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Snap ITC" size="36" style="0"/>
                 </Property>
@@ -422,9 +407,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="feld5">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Snap ITC" size="36" style="0"/>
                 </Property>
@@ -456,9 +438,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="feld6">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Snap ITC" size="36" style="0"/>
                 </Property>
@@ -490,9 +469,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="feld7">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Snap ITC" size="36" style="0"/>
                 </Property>
@@ -524,9 +500,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="feld8">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Snap ITC" size="36" style="0"/>
                 </Property>
@@ -558,9 +531,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="feld9">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Snap ITC" size="36" style="0"/>
                 </Property>
