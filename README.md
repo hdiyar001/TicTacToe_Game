@@ -4,20 +4,24 @@ Mit Java Swing entwickelt, bietet dieses TicTacToe-Spiel eine grafische Benutzer
 
 ## Spielansichten
 
+
 ### Spielstart Auswahl
 ![Spielstart Auswahl](images/ChooseXOToBegin.png)
 
 Hier wählt der Spieler, ob er X oder O sein möchte, um das Spiel zu beginnen.
+
 
 ### Spielbrett
 ![Spielbrett](images/GameBoard.png)
 
 Das Spielbrett zeigt leere Felder zu Beginn des Spiels, auf denen die Spieler ihre X oder O setzen.
 
+
 ### Während des Spiels
 ![Während des Spiels](images/WhilePlaying.png)
 
 Eine laufende Partie, bei der einige Felder bereits besetzt sind und die Entscheidungen der Spieler sichtbar werden.
+
 
 ### Gewinner Bildschirm
 ![Gewinner Bildschirm](images/WinScreen.png)
