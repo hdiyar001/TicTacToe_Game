@@ -1,32 +1,30 @@
-===============================================
-TicTacToe Spiel - Java Swing Implementierung
-===============================================
+# TicTacToe-Spiel
 
-1. Einführung:
----------------
-Dieses Dokument bietet eine kurze Übersicht über das von mir programmierte TicTacToe-Spiel mit Java Swing. Dieses Projekt wurde durchgeführt, um mein Wissen und meine Fähigkeiten in Java und Swing zu verbessern und zu vertiefen.
+Mit Java Swing entwickelt, bietet dieses TicTacToe-Spiel eine grafische Benutzeroberfläche und einen computergesteuerten Gegner, der derzeit die Minimax-Strategie verwendet. Zukünftige Erweiterungen sollen weitere Strategien einführen, um das Spiel noch herausfordernder zu gestalten. Diese Entwicklung zeigt nicht nur die Fähigkeit, klassische Spiele neu zu interpretieren, sondern auch, komplexe Algorithmen in unterhaltsame und interaktive Anwendungen zu integrieren.
 
-2. Inhalt:
-----------
-- Kurzbeschreibung des TicTacToe-Spiels
-- Hinweis zur Implementierung mittels Java Swing
-- Informationen zur Verwendung und Ausführung
+## Spielansichten
 
-3. TicTacToe-Spiel:
---------------------
-TicTacToe, auch bekannt als "Drei gewinnt", ist ein klassisches Brettspiel für zwei Spieler. Ziel des Spiels ist es, drei eigene Symbole (meistens Kreuze und Kreise) in einer Reihe, Spalte oder Diagonalen zu platzieren, bevor der Gegner dies tut.
+### Spielstart Auswahl
+![Spielstart Auswahl](images/ChooseXOToBegin.png)
+Hier wählt der Spieler, ob er X oder O sein möchte, um das Spiel zu beginnen.
 
-4. Java Swing Implementierung:
-------------------------------
-Für die grafische Benutzeroberfläche dieses Spiels wurde Java Swing verwendet. Dies bietet eine einfache und intuitive Möglichkeit, interaktive Anwendungen für Desktop-Umgebungen zu erstellen. Durch dieses Projekt konnte ich meine Kenntnisse in Java Swing vertiefen und praktisch anwenden.
+### Spielbrett
+![Spielbrett](images/GameBoard.png)
+Das Spielbrett zeigt leere Felder zu Beginn des Spiels, auf denen die Spieler ihre X oder O setzen.
 
-5. Ausführung:
---------------
-Um das TicTacToe-Spiel auszuführen, stellen Sie sicher, dass Sie die erforderliche Java-Version installiert haben. Führen Sie dann die Hauptklasse des Spiels aus. Ein Fenster wird sich öffnen, in dem Sie das Spiel gegen einen Freund oder gegen den Computer spielen können.
+### Während des Spiels
+![Während des Spiels](images/WhilePlaying.png)
+Eine laufende Partie, bei der einige Felder bereits besetzt sind und die Entscheidungen der Spieler sichtbar werden.
 
-7. Kontakt:
------------
-Wenn Sie Fragen, Feedback oder Anregungen zum TicTacToe-Spiel oder zur Implementierung haben, zögern Sie bitte nicht, sich zu melden.
+### Gewinner Bildschirm
+![Gewinner Bildschirm](images/WinScreen.png)
+Der Gewinnerbildschirm wird angezeigt, wenn ein Spieler gewinnt, komplett mit einer Glückwunschmeldung.
 
-Viel Spaß beim Spielen und Entdecken des Codes!
+## Wie man das Spiel startet
 
+Um das TicTacToe-Spiel zu starten, folge diesen Schritten:
+
+1. Klone das Repository.
+2. Stelle sicher, dass Java auf deinem System installiert ist.
+3. Kompiliere die Quelldateien mit `javac` oder einer IDE deiner Wahl.
+4. Führe die kompilierte `.class`-Datei aus, um das Spiel zu starten.

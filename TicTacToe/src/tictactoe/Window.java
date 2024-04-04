@@ -440,54 +440,53 @@ public class Window extends javax.swing.JFrame {
     private javax.swing.JLabel y_Player;
     // End of variables declaration//GEN-END:variables
 
-   private void update(JButton f) {
-    char gText = f.getText().charAt(0);
+    private void update(JButton f) {
+        char gText = f.getText().charAt(0);
 
-    if (gText == ' ') {
-        f.setText(String.valueOf(player));
-        char[] board = {feld1.getText().charAt(0), feld2.getText().charAt(0),
-            feld3.getText().charAt(0), feld4.getText().charAt(0), feld5.getText().charAt(0),
-            feld6.getText().charAt(0), feld7.getText().charAt(0), feld8.getText().charAt(0),
-            feld9.getText().charAt(0)};
-        CheckWinner cw = new CheckWinner(board, player);
-        int winner = cw.getWinner();
-        if (winner == 0) { // Wenn kein Gewinner, lass den Computer ziehen
-            makeBestMove(); // Computer macht den besten Zug
-            // Aktualisiere das Board und überprüfe erneut auf einen Gewinner
-            board = new char[]{feld1.getText().charAt(0), feld2.getText().charAt(0),
+        if (gText == ' ') {
+            f.setText(String.valueOf(player));
+            char[] board = {feld1.getText().charAt(0), feld2.getText().charAt(0),
                 feld3.getText().charAt(0), feld4.getText().charAt(0), feld5.getText().charAt(0),
                 feld6.getText().charAt(0), feld7.getText().charAt(0), feld8.getText().charAt(0),
                 feld9.getText().charAt(0)};
-            cw = new CheckWinner(board, player);
-            winner = cw.getWinner();
-        }
-
-        if (winner != 0) {
-            if (winner == -1) {
-                computer_wins++;
-            } else if (winner == 1) {
-                player_wins++;
+            CheckWinner cw = new CheckWinner(board, player);
+            int winner = cw.getWinner();
+            if (winner == 0) { // Wenn kein Gewinner, lass den Computer ziehen
+                makeBestMove(); // Computer macht den besten Zug
+                // Aktualisiere das Board und überprüfe erneut auf einen Gewinner
+                board = new char[]{feld1.getText().charAt(0), feld2.getText().charAt(0),
+                    feld3.getText().charAt(0), feld4.getText().charAt(0), feld5.getText().charAt(0),
+                    feld6.getText().charAt(0), feld7.getText().charAt(0), feld8.getText().charAt(0),
+                    feld9.getText().charAt(0)};
+                cw = new CheckWinner(board, player);
+                winner = cw.getWinner();
             }
-            ResetFeld();
-        } else if (winner == 2) {
-            ResetFeld();
-        }
 
-        if (player_wins == 3 && computer_wins < 3) {
-            new WinnerWindow("Congratulations! You won :)", 1).setVisible(true);
-            player_wins = 0;
-            computer_wins = 0;
-            ResetFeld();
-        } else if (computer_wins == 3 && player_wins < 3) {
-            new WinnerWindow("Unfortunately, you lost :(", -1).setVisible(true);
-            player_wins = 0;
-            computer_wins = 0;
-            ResetFeld();
+            if (winner != 0) {
+                if (winner == -1) {
+                    computer_wins++;
+                } else if (winner == 1) {
+                    player_wins++;
+                }
+                ResetFeld();
+            } else if (winner == 2) {
+                ResetFeld();
+            }
+
+            if (player_wins == 3 && computer_wins < 3) {
+                new WinnerWindow("Congratulations! You won :)", 1).setVisible(true);
+                player_wins = 0;
+                computer_wins = 0;
+                ResetFeld();
+            } else if (computer_wins == 3 && player_wins < 3) {
+                new WinnerWindow("Unfortunately, you lost :(", -1).setVisible(true);
+                player_wins = 0;
+                computer_wins = 0;
+                ResetFeld();
+            }
         }
-    }
         turn = turn == 1 ? -1 : 1;
-}
-
+    }
 
     private void ResetFeld() {
         JButton[] board = {feld1, feld2, feld3, feld4, feld5, feld6, feld7, feld8, feld9};
@@ -499,71 +498,69 @@ public class Window extends javax.swing.JFrame {
         y_Player.setText("O :     " + computer_wins);
     }
 
-    
 // Methode zur Bewertung der Spielzustände 
-private int minimax(char[] board, int depth, boolean isMaximizing) {
-    CheckWinner cw = new CheckWinner(board, player);
-    int winner = cw.getWinner();
-    
-    if (winner != 0) return winner; // Rückgabe des Bewertungswerts
-    
-    if (isMaximizing) {
-        int bestScore = Integer.MIN_VALUE;
-        for (int i = 0; i < board.length; i++) {
-            if (board[i] == ' ') {
-                board[i] = computer; // Zug ausführen
-                int score = minimax(board, depth + 1, false);
-                board[i] = ' '; // Zug rückgängig machen
-                bestScore = Math.max(score, bestScore);
-            }
+    private int minimax(char[] board, int depth, boolean isMaximizing) {
+        CheckWinner cw = new CheckWinner(board, player);
+        int winner = cw.getWinner();
+
+        if (winner != 0) {
+            return winner; // Rückgabe des Bewertungswerts
         }
-        return bestScore;
-    } else {
-        int bestScore = Integer.MAX_VALUE;
-        for (int i = 0; i < board.length; i++) {
-            if (board[i] == ' ') {
-                board[i] = player; // Zug ausführen
-                int score = minimax(board, depth + 1, true);
-                board[i] = ' '; // Zug rückgängig machen
-                bestScore = Math.min(score, bestScore);
+        if (isMaximizing) {
+            int bestScore = Integer.MIN_VALUE;
+            for (int i = 0; i < board.length; i++) {
+                if (board[i] == ' ') {
+                    board[i] = computer; // Zug ausführen
+                    int score = minimax(board, depth + 1, false);
+                    board[i] = ' '; // Zug rückgängig machen
+                    bestScore = Math.max(score, bestScore);
+                }
             }
+            return bestScore;
+        } else {
+            int bestScore = Integer.MAX_VALUE;
+            for (int i = 0; i < board.length; i++) {
+                if (board[i] == ' ') {
+                    board[i] = player; // Zug ausführen
+                    int score = minimax(board, depth + 1, true);
+                    board[i] = ' '; // Zug rückgängig machen
+                    bestScore = Math.min(score, bestScore);
+                }
+            }
+            return bestScore;
         }
-        return bestScore;
     }
-}
 
 // Methode zur Auswahl und Ausführung des besten Zugs für den Computer
-private void makeBestMove() {
-    int bestScore = Integer.MIN_VALUE;
-    int move = -1;
-    char[] board = {feld1.getText().charAt(0), feld2.getText().charAt(0), feld3.getText().charAt(0),
-                    feld4.getText().charAt(0), feld5.getText().charAt(0), feld6.getText().charAt(0),
-                    feld7.getText().charAt(0), feld8.getText().charAt(0), feld9.getText().charAt(0)};
-    for (int i = 0; i < board.length; i++) {
-        if (board[i] == ' ') {
-            board[i] = computer;
-            int score = minimax(board, 0, false);
-            board[i] = ' ';
-            if (score > bestScore) {
-                bestScore = score;
-                move = i;
+    private void makeBestMove() {
+        int bestScore = Integer.MIN_VALUE;
+        int move = -1;
+        char[] board = {feld1.getText().charAt(0), feld2.getText().charAt(0), feld3.getText().charAt(0),
+            feld4.getText().charAt(0), feld5.getText().charAt(0), feld6.getText().charAt(0),
+            feld7.getText().charAt(0), feld8.getText().charAt(0), feld9.getText().charAt(0)};
+        for (int i = 0; i < board.length; i++) {
+            if (board[i] == ' ') {
+                board[i] = computer;
+                int score = minimax(board, 0, false);
+                board[i] = ' ';
+                if (score > bestScore) {
+                    bestScore = score;
+                    move = i;
+                }
             }
         }
+        if (move != -1) {
+            updateMove(move, computer);
+        }
     }
-    if (move != -1) {
-        updateMove(move, computer);
-    }
-}
 
 // Hilfsmethode zur Ausführung eines Zugs
-private void updateMove(int position, char player) {
-    JButton[] buttons = {feld1, feld2, feld3, feld4, feld5, feld6, feld7, feld8, feld9};
-    if(position >= 0 && position < buttons.length) {
-        buttons[position].setText(String.valueOf(player));
-        turn = turn == 1 ? -1 : 1; // Spielerwechsel
+    private void updateMove(int position, char player) {
+        JButton[] buttons = {feld1, feld2, feld3, feld4, feld5, feld6, feld7, feld8, feld9};
+        if (position >= 0 && position < buttons.length) {
+            buttons[position].setText(String.valueOf(player));
+            turn = turn == 1 ? -1 : 1; // Spielerwechsel
+        }
     }
-}
 
 }
-
-
