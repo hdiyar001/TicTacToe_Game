@@ -5,7 +5,7 @@ Mit Java Swing entwickelt, bietet dieses TicTacToe-Spiel eine grafische Benutzer
 ## Spielansichten
 
 ### Spielstart Auswahl
-![Spielstart Auswahl](./images/ChooseXOToBegin.png)
+![Spielstart Auswahl](images/ChooseXOToBegin.png)
 Hier wählt der Spieler, ob er X oder O sein möchte, um das Spiel zu beginnen.
 
 ### Spielbrett
